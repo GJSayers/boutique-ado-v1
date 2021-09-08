@@ -38,6 +38,19 @@ body {
     color: white;
 }
 
+.btn-outline-black {
+    background: #fff;
+    color: black !important; /* use important to override link colours for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:focus,
+.btn-outline-black:active {
+    background: black;
+    color: #fff !important;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -86,6 +99,8 @@ a.category-badge > span.bridge:hover {
 .btt-link {
     cursor: pointer;
 }
+
+
 
 /* -------------------------------- Media Queries */
 
