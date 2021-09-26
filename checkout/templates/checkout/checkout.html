@@ -91,19 +91,18 @@
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.county | as_crispy_field }}
-                    
-                    <div class="form-check form-check-inline float-right mr-0">
-                        {% if user.is_authenticated %}
-                            <label for="id-save-info" class="form-check-label">Save this delivery info to my profile</label>
-                            <input type="checkbox" class="form-check-input ml-2 mr-0" id="id-save-info" name="save-info" checked>
-                        {% else %}
-                        <label for="id-save-info" class="form-check-label">
-                            <a href="{% url 'account_signup' %}" class="text-info">Create an account</a>
-                            <a href="{% url 'account_login' %}" class="text-info">Login</a> to save this information
-                        </label>
-                        {% endif %}
-                    </div>
-                </fieldset>
+                        <div class="form-check form-check-inline float-right mr-0">
+                            {% if user.is_authenticated %}
+                                <label for="id-save-info" class="form-check-label">Save this delivery info to my profile</label>
+                                <input type="checkbox" class="form-check-input ml-2 mr-0" id="id-save-info" name="save-info" checked>
+                            {% else %}
+                                <label for="id-save-info" class="form-check-label">
+                                    <a href="{% url 'account_signup' %}" class="text-info">Create an account</a>
+                                    <a href="{% url 'account_login' %}" class="text-info">Login</a> to save this information
+                                </label>
+                            {% endif %}
+                        </div>
+                    </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                         <!--A stripe card element will go here-->
