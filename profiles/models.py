@@ -7,7 +7,7 @@ from django_countries.fields import CountryField
 
 class UserProfile(models.Model):
     """
-    A uer profile model for maintaining default 
+    A user profile model for maintaining default 
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
